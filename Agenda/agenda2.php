@@ -69,11 +69,11 @@
 			<input type="text" name="nombre"><br><br>
 			Email:<br>
 			<input type="text" name="email"><br><br>
-			<!-- Creamos un campo oculto para almacenar el nombre que pasamos desde index2.html -->
-			<input type="hidden" name="nomb" value="<?php echo $_GET['nomb']; ?>" hidden>
+			<!-- Creamos un campo oculto para almacenar el nombre que pasamos desde index2.php -->
+			<input type="hidden" name="nomb" value="<?php echo $_POST['nomb']; ?>" hidden>
 			<button type="submit" name="submit" >Añadir contacto</button>
 		</form>
-		<!-- Añadimos codigo php para recojer el nombre de index2.html -->
+		<!-- Añadimos codigo php para recojer el nombre de index2.php -->
 		<h2>AGENDA DE <?php echo $_POST['nomb'] ?></h2>
 		<table>
 			<tr>
