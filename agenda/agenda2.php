@@ -41,7 +41,7 @@
             // REALIZAR COMPROBACIONES NECESARIAS
             $nombre = $_POST['nombre'];
             $email = $_POST['email'];
-
+            //Manda un alert si no hay nombre
             if($nombre == null){
                 echo'<script type="text/javascript">
                         alert("Nombre vacío");
@@ -49,6 +49,7 @@
                     </script>';
             }
             else{
+                //
                 if($array_agenda[$nombre] == false && $email != null){
                     $array_agenda[$nombre] = $email;
                 }
@@ -71,8 +72,10 @@
 			<input type="text" name="email"><br><br>
 			<button type="submit" name="submit" >Añadir contacto</button>
 		</form>
-
-		<h2>AGENDA</h2>
+		<form action="index2.php" method="post">
+		<input name="mostrar" type="hidden" value="<?php $valor = $_POST['name']; echo $valor;  ?>"/><br>
+		<h2>AGENDA <?php echo  "DE ".$valor ?></h2>
+		</form>
 		<table>
 		  <tr>
 		    <th>Nombre</th>
